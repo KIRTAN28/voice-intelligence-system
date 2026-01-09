@@ -1,0 +1,5 @@
+final_audio.wav
+.env*
+.env
+*.gguf
+venv/
