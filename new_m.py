@@ -3,13 +3,11 @@ import sounddevice as sd
 import numpy as np
 
 tts = pipeline("text-to-speech", model="facebook/mms-tts-eng")
-
-# 2. Generate Audio
-text = "Hello, this is a real text to speech test. It is working now."
-print(f"AI: {text}")
+text = "Hello this is working now"
+print("AI: {text}")
 audio = tts(text)
 
-# 3. FIX: Reshape and Normalize 
+# Reshape and Normalize 
 waveform = audio["audio"].flatten() 
 sampling_rate = audio["sampling_rate"]
 
